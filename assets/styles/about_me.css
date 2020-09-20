@@ -1,0 +1,50 @@
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: auto;
+      -ms-flex-align: auto;
+          align-items: auto;
+  -ms-flex-line-pack: start;
+      align-content: start;
+}
+
+.item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  margin: 5vw 5vh;
+  width: 46%;
+}
+
+.content {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 0.25em;
+  -webkit-box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.25);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10vmin;
+}
+
+.paper > div {
+  margin: 0 6vw;
+}
+
+.informationGrid span title {
+  float: left;
+}
+
+.informationGrid span value {
+  float: right;
+}
+/*# sourceMappingURL=about_me.css.map */

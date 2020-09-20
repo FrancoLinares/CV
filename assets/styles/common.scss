@@ -1,0 +1,62 @@
+.technologies {
+  position: absolute;
+  left: 7vw;
+  bottom: 10vh;
+  border: none;
+  width: 400px;
+  opacity: 0.8;
+  svg {
+    height: 71px;
+    margin: 4%;
+  }
+}
+h3.title {
+  margin: 3vh 0 10vh 0;
+}
+/* -- Animated hr -- */
+
+.progress {
+  background: rgba(1, 15, 30, 0.1);
+  height: 1px;
+  overflow: hidden;
+  position: relative;
+  width: 100px;
+}
+
+.progress::before {
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-name: progress;
+  background: #2c6d6e;
+  content: "";
+  display: block;
+  height: 1px;
+  position: absolute;
+  width: 50px;
+}
+
+@keyframes progress {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(800px);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .technologies {
+    position: relative;
+    border: none;
+    width: 200px;
+    margin: auto;
+    bottom: 0;
+    left: 0;
+    margin-top: 15vw;
+    svg {
+      height: 40px;
+      margin: 1%;
+    }
+  }
+}

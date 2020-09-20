@@ -1,0 +1,25 @@
+.initPage {
+  h1 {
+    margin: 15vh 0;
+    text-align: center;
+  }
+  h2 {
+    margin: 10vh 0;
+    margin-left: -5vw;
+  }
+  h3 {
+    margin-left: 10vw;
+  }
+  p {
+    font-size: 1rem;
+    margin-top: 0;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .initPage {
+    h1 {
+      margin: 5vh 0;
+      text-align: center;
+    }
+  }
+}

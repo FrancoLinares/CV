@@ -1,0 +1,41 @@
+{
+  "name": "cvresume",
+  "version": "1.0.0",
+  "description": "CV Resume",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "export": "next build & next export -o build"
+  },
+  "keywords": [
+    "CV",
+    "RESUME"
+  ],
+  "author": "Franco Linares",
+  "license": "ISC",
+  "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.56",
+    "@popmotion/popcorn": "^0.4.4",
+    "@types/browserify": "^12.0.36",
+    "@zeit/next-css": "^1.0.1",
+    "browserify": "^16.5.2",
+    "framer": "^1.2.6",
+    "framer-motion": "^2.6.13",
+    "next": "^9.5.3",
+    "normalize.css": "^8.0.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-material-ui-carousel": "^1.8.3",
+    "typescript": "^4.0.2"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.1.0",
+    "eslint": "^7.9.0",
+    "prop-types": "^15.7.2"
+  }
+}
