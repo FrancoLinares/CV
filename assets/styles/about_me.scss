@@ -21,11 +21,18 @@
 .paper > div {
   margin: 0 6vw;
 }
-.basicInformation {
+.basicInformationValue {
   margin: 0 0 0 -80px;
+}
+.basicInformation {
+  margin: 0 auto;
+  margin-left: -3%;
 }
 @media only screen and (max-width: 600px) {
   .paper > div {
     margin: 40% 6vw;
+  }
+  .basicInformation {
+    margin-left: 0%;
   }
 }

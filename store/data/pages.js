@@ -103,6 +103,8 @@ const webPageData = {
           desc: "Participated in all aspects of 'Faraday Software Proyect', from design and development to testing.\nWorked on the organization of the lockpicking stand at the annually 'Eko Party'.",
           website: "",
           dialog: {
+            text:
+              "Faraday introduces a new concept - IPE (Integrated Penetration-Test Environment) a multiuser Penetration test IDE. Designed for distributing, indexing, and analyzing the data generated during a security audit.\nMade for true pentesters!\nFaraday was made to let you take advantage of the available tools in the community in a truly multiuser way.\nFaraday crunches the data you load into different visualizations that are useful to managers and pentesters alike.",
             tech: ["AngularJS", "Python", "CouchDB(no-sql)"],
           },
         },

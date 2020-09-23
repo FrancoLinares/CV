@@ -43,7 +43,7 @@ function about() {
           </div>
         </Grid>
         <Grid className={styles.paper} item lg={6}>
-          <div>
+          <div className={styles.basicInformation}>
             <Typography variant="h2" gutterBottom>
               Basic information:
             </Typography>
@@ -57,7 +57,7 @@ function about() {
                           {key.toUpperCase()} :
                         </Typography>
                       </Grid>
-                      <Grid item lg={6} className={styles.basicInformation}>
+                      <Grid item lg={6} className={styles.basicInformationValue}>
                         <Typography variant="h4" gutterBottom>
                           {value}
                         </Typography>

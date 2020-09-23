@@ -72,7 +72,7 @@ export default function ScrollDialog({ open, setOpen, data }) {
 ScrollDialog.propTypes = {
   data: PropTypes.shape({
     dialog: PropTypes.shape({
-      text: PropTypes.string.isRequired,
+      text: PropTypes.string,
     }),
     title: PropTypes.string.isRequired,
     urlImages: PropTypes.array,
