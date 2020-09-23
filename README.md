@@ -6,7 +6,7 @@
 > Resume adaptable
 > <br />
 > <br />
-> Feel freee to adapt it to your career
+> Feel free to adapt it to your career
 
 ---
 
