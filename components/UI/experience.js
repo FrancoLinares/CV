@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import PropTypes from "prop-types";
 // Material-UI
 import { makeStyles } from "@material-ui/core/styles";
@@ -10,6 +10,8 @@ import WorkIcon from "@material-ui/icons/Work";
 import commonStyles from "../../assets/styles/common.css";
 // Framer-motion
 import { motion, useViewportScroll, useTransform } from "framer-motion";
+// Context
+import { dataContext } from "../../store/context/dataContext";
 
 const useStyles = makeStyles({
   box: {
@@ -19,10 +21,16 @@ const useStyles = makeStyles({
   },
 });
 
-function experience({ data }) {
+function experience() {
+  const { data, isMobile } = useContext(dataContext);
   const classes = useStyles();
   const { scrollYProgress } = useViewportScroll();
-  const opacity = useTransform(scrollYProgress, [0.5, 0.6, 0.9, 1], [0, 0.5, 0.95, 1]);
+  let opacity = 0;
+  if (isMobile) {
+    opacity = useTransform(scrollYProgress, [0.42, 0.44, 0.46, 0.47], [0, 0.3, 0.85, 1]);
+  } else {
+    opacity = useTransform(scrollYProgress, [0.55, 0.59, 0.61, 0.63], [0.05, 0.6, 0.9, 1]);
+  }
 
   return (
     <motion.div initial={{ opacity: 1 }} style={{ opacity: opacity }}>
@@ -41,7 +49,7 @@ function experience({ data }) {
             </Typography>
           </Box>
         </Box>
-        <Timeline data={data.experience.timeline.work}></Timeline>
+        <Timeline data={data.experience.timeline.work} />
         <Box display="flex" alignItems="center" className={classes.box}>
           <Box minWidth={45}>
             <WorkIcon />
@@ -52,7 +60,7 @@ function experience({ data }) {
             </Typography>
           </Box>
         </Box>
-        <Timeline data={data.experience.timeline.education}></Timeline>
+        <Timeline data={data.experience.timeline.education} />
       </Box>
     </motion.div>
   );

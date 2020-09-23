@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import PropTypes from "prop-types";
 // Material UI
 import Typography from "@material-ui/core/Typography";
@@ -11,6 +11,8 @@ import styles from "../../assets/styles/about_me.css";
 import commonStyles from "../../assets/styles/common.css";
 // Framer-motion
 import { motion, useViewportScroll, useTransform } from "framer-motion";
+// Context
+import { dataContext } from "../../store/context/dataContext";
 
 const BorderLinearProgress = withStyles((theme) => ({
   root: {
@@ -26,9 +28,16 @@ const BorderLinearProgress = withStyles((theme) => ({
   },
 }))(LinearProgress);
 
-function skills({ data }) {
+function skills() {
+  const { data, isMobile } = useContext(dataContext);
   const { scrollYProgress } = useViewportScroll();
-  const opacity = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 1], [0, 0.05, 0.25, 0.9, 1]);
+  let opacity = 0;
+  if (isMobile) {
+    opacity = useTransform(scrollYProgress, [0.2, 0.25, 0.28, 0.3], [0, 0.2, 0.79, 1]);
+  } else {
+    opacity = useTransform(scrollYProgress, [0.28, 0.3, 0.34, 0.38], [0, 0.1, 0.8, 1]);
+  }
+
   return (
     <motion.div initial={{ opacity: 1 }} style={{ opacity: opacity }}>
       <Typography className={commonStyles.title} variant="h3" gutterBottom>
@@ -40,7 +49,7 @@ function skills({ data }) {
           Object.entries(data.skills.tech).map(([key, value]) => {
             return (
               <Grid key={key} item xs={4} className={styles.paper}>
-                <Typography variant="h4" gutterBottom>
+                <Typography variant="h5" gutterBottom>
                   {key}
                 </Typography>
                 <Box display="flex" alignItems="center">

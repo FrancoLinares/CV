@@ -13,19 +13,30 @@ import "normalize.css";
 import animationCSS from "../assets/styles/init_screen_animation.css";
 // Material-UI
 import { createMuiTheme, responsiveFontSizes, ThemeProvider } from "@material-ui/core/styles";
+// Context
+import { dataContext } from "../store/context/dataContext";
+// isMobile Hook
+import useDeviceDetect from "../utils/useDeviceDetect";
 
 const Index = () => {
-  let theme = createMuiTheme();
+  const { isMobile } = useDeviceDetect();
+  let theme = createMuiTheme({
+    props: {
+      // withWidth component ⚛️
+      MuiWithWidth: {
+        // Initial width property
+        initialWidth: "lg", // Breakpoint being globally set 🌎!
+      },
+    },
+  });
   theme = responsiveFontSizes(theme);
-  const ageDate = new Date(data.about.information.age);
-  if (!isNaN(ageDate.getTime())) {
-    data.about.information.age = new Date(new Date() - ageDate).getFullYear() - 1970;
-  }
+  const age = new Date(new Date() - new Date(data.about.information.age)).getFullYear() - 1970;
 
   useEffect(() => {
     if (!data.about.information.website) {
       data.about.information.website = window.location.href;
     }
+    data.about.information.age = age;
   }, []);
 
   return (
@@ -34,18 +45,20 @@ const Index = () => {
         <div className={animationCSS.bg}></div>
         <div className={[animationCSS.bg, animationCSS.bg2].join(" ")}></div>
         <div className={[animationCSS.bg, animationCSS.bg3].join(" ")}></div>
-        <Page>
-          <InitPage data={data} />
-        </Page>
-        <Page>
-          <About data={data} />
-        </Page>
-        <Page>
-          <Skills data={data} />
-        </Page>
-        <Page height={"auto"}>
-          <Experience data={data} />
-        </Page>
+        <dataContext.Provider value={{ data, isMobile }}>
+          <Page height={"100vh"}>
+            <InitPage />
+          </Page>
+          <Page>
+            <About />
+          </Page>
+          <Page>
+            <Skills />
+          </Page>
+          <Page>
+            <Experience />
+          </Page>
+        </dataContext.Provider>
       </ThemeProvider>
     </React.Fragment>
   );

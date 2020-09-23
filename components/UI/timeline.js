@@ -11,6 +11,7 @@ import TimelineDot from "@material-ui/lab/TimelineDot";
 import LaptopMacIcon from "@material-ui/icons/LaptopMac";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
+import Tooltip from "@material-ui/core/Tooltip";
 // Components
 import Dialog from "../containers/dialog";
 
@@ -56,31 +57,33 @@ export default function CustomizedTimeline({ data }) {
         {data &&
           data.map((m, i) => {
             return (
-              <>
-                <TimelineItem key={i}>
-                  <TimelineOppositeContent key={"oppositeContent" + i}>
+              <React.Fragment key={i}>
+                <TimelineItem>
+                  <TimelineOppositeContent>
                     <Typography variant="body1" color="textSecondary">
                       {m.time}
                     </Typography>
                   </TimelineOppositeContent>
-                  <TimelineSeparator key={"separator" + i}>
+                  <TimelineSeparator>
                     <TimelineDot>
                       <LaptopMacIcon color={m.dialog ? "primary" : "action"} />
                     </TimelineDot>
-                    <TimelineConnector key={"connector" + i} />
+                    <TimelineConnector />
                   </TimelineSeparator>
-                  <TimelineContent key={"content" + i} onClick={() => handleClick(m)}>
-                    <Paper elevation={1} className={classes.paper + " " + `${m.dialog ? classes.clickeable : ""}`}>
-                      <Typography variant="h6" component="h1">
-                        {m.title}
-                      </Typography>
-                      {m.desc.split("\n").map((string, i) => {
-                        return <Typography key={i.toString() + "key"}>{string}</Typography>;
-                      })}
-                    </Paper>
-                  </TimelineContent>
+                  <Tooltip title={m.dialog ? "Click me!" : ""} aria-label="click">
+                    <TimelineContent onClick={() => handleClick(m)}>
+                      <Paper elevation={1} className={classes.paper + " " + `${m.dialog ? classes.clickeable : ""}`}>
+                        <Typography variant="h6" component="h1">
+                          {m.title}
+                        </Typography>
+                        {m.desc.split("\n").map((string, i) => {
+                          return <Typography key={i + 50}>{string}</Typography>;
+                        })}
+                      </Paper>
+                    </TimelineContent>
+                  </Tooltip>
                 </TimelineItem>
-              </>
+              </React.Fragment>
             );
           })}
       </Timeline>

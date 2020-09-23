@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 // Framer-motion
 import { motion, useViewportScroll, useTransform } from "framer-motion";
 // Material UI
@@ -7,6 +7,8 @@ import { makeStyles } from "@material-ui/core/styles";
 // Styles
 import styles from "../../assets/styles/common.css";
 import pageStyles from "../../assets/styles/page.css";
+// Context
+import { dataContext } from "../../store/context/dataContext";
 
 const useStyles = makeStyles((theme) => ({
   rotatePlus5: {
@@ -23,14 +25,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function initPage({ data }) {
+function initPage() {
+  const { data, isMobile } = useContext(dataContext);
   const classes = useStyles();
   const { scrollYProgress } = useViewportScroll();
   const opacity = useTransform(scrollYProgress, [0, 0.3, 1], [1, 0.2, 0]);
-
-  // scrollYProgress.onChange((x) => {
-  //   console.log(x);
-  // });
 
   return (
     <>

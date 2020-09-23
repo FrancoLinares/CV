@@ -1,6 +1,6 @@
 .root {
-  height: 100vh;
-  margin: 0;
+  height: auto;
+  padding: 0 0 20% 0;
   overflow: hidden;
   justify-items: center;
   text-align: center;
@@ -32,6 +32,12 @@
   .root .initPage h1 {
     margin: 5vh 0;
     text-align: center;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .root {
+    height: auto !important;
   }
 }
 /*# sourceMappingURL=page.css.map */

@@ -21,11 +21,11 @@
 .paper > div {
   margin: 0 6vw;
 }
-.informationGrid span {
-  title {
-    float: left;
-  }
-  value {
-    float: right;
+.basicInformation {
+  margin: 0 0 0 -80px;
+}
+@media only screen and (max-width: 600px) {
+  .paper > div {
+    margin: 40% 6vw;
   }
 }
