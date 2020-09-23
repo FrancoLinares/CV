@@ -27,7 +27,7 @@
 
 ---
 
-### 🏠 [Homepage](https://github.com/FrancoLinares/CV#readme)
+### 🏠 [Homepage](https://resume-eight-eosin.vercel.app/)
 
 ## Install
 
