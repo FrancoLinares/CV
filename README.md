@@ -26,15 +26,9 @@
 
 ---
 
-<<<<<<< HEAD
-
 ### 🏠 Try it ! [Homepage](https://resume-eight-eosin.vercel.app/)
 
-=======
-
-### 🏠 [Homepage](https://resume-eight-eosin.vercel.app/)
-
-> > > > > > > 6f0df697c82c0b516245c7970ab8f24784df94cb
+---
 
 ## Install
 
