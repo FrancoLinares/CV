@@ -9,11 +9,10 @@ const webPageData = {
   },
   about: {
     desc:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "I am a full-stack web developer and a Bachelor of Organization Information Systems student at the UBA.\nI like to be updated in the new technologies that appear, and to implement a clean and reusable code applying the best practices. I am currently involved in the development of trading tools.\nI have experience in the web development sector since 2013.\nI am curious and I am always working on personal projects.",
     information: {
-      website: "",
       location: "Argentina, Capital Federal",
-      age: "09/04/1995",
+      age: 25,
       email: "franco.linares@gmail.com",
     },
   },

@@ -38,7 +38,12 @@ function about() {
               About me:
             </Typography>
             <Typography variant="h4" gutterBottom>
-              {data.about.desc}
+              {data.about.desc.split("\n").map((string, i) => (
+                <>
+                  {string}
+                  <br />
+                </>
+              ))}
             </Typography>
           </div>
         </Grid>
