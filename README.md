@@ -4,9 +4,8 @@
 [![License: ISC](https://img.shields.io/badge/License-ISC-yellow.svg)](#)
 
 > Resume adaptable
-> <br />
-> <br />
-> Feel freee to adapt it to your career
+> <br /> > <br />
+> Feel free to adapt it to your career
 
 ---
 
@@ -27,7 +26,7 @@
 
 ---
 
-### 🏠 [Homepage](https://github.com/FrancoLinares/CV#readme)
+### 🏠 Try it ! [Homepage](https://resume-eight-eosin.vercel.app/)
 
 ## Install
 
@@ -46,6 +45,16 @@ npm run start
 ```sh
 npm run test
 ```
+
+---
+
+## Adaptable
+
+Only you have to do is modify [`store/data/pages.js`](store/data/pages.js/).
+
+There is all the information of the website.
+
+---
 
 ## Author
 

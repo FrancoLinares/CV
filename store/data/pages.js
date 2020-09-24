@@ -1,4 +1,8 @@
 const webPageData = {
+  social: {
+    github: "https://github.com/FrancoLinares",
+    linkedin: "https://www.linkedin.com/in/francolinares/",
+  },
   init_screen: {
     header: "Hi, Im Franco Linares. Contact me.",
     position: "Full-Stack Developer",

@@ -12,6 +12,21 @@
   margin: 4%;
 }
 
+.socialMedia {
+  position: absolute;
+  right: 6vw;
+  bottom: 3vh;
+  border: none;
+  width: 250px;
+  opacity: 0.8;
+}
+
+.socialMedia svg {
+  height: 70px;
+  margin: 10%;
+  width: 70px;
+}
+
 h3.title {
   margin: 3vh 0 10vh 0;
 }
@@ -77,6 +92,19 @@ h3.title {
   .technologies svg {
     height: 40px;
     margin: 1%;
+  }
+  .socialMedia {
+    position: absolute;
+    right: 2vw;
+    bottom: 8vh;
+    border: none;
+    width: 60px;
+    opacity: 1;
+  }
+  .socialMedia svg {
+    height: 40px;
+    margin: 8%;
+    width: 40px;
   }
 }
 /*# sourceMappingURL=common.css.map */
