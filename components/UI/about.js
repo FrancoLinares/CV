@@ -39,10 +39,10 @@ function about() {
             </Typography>
             <Typography variant="h4" gutterBottom>
               {data.about.desc.split("\n").map((string, i) => (
-                <>
+                <React.Fragment key={i}>
                   {string}
                   <br />
-                </>
+                </React.Fragment>
               ))}
             </Typography>
           </div>
