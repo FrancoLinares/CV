@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 // Store
-import data from "../store/data/information";
+import information from "../store/data/information";
 // Components
 // -- UI
 import Layout from "../components/containers/layout/layout";
@@ -20,6 +20,7 @@ import useDeviceDetect from "../hooks/useDeviceDetect";
 
 const Index = () => {
   const { isMobile } = useDeviceDetect();
+  const [data, setData] = useState(information);
   let theme = createMuiTheme({
     props: {
       // withWidth component ⚛️
@@ -30,14 +31,24 @@ const Index = () => {
     },
   });
   theme = responsiveFontSizes(theme);
-  const age = new Date(new Date() - new Date(data.about.information.age)).getFullYear() - 1970;
+  const age = new Date(new Date() - new Date(information.about.information.age)).getFullYear() - 1970;
 
   useEffect(() => {
-    if (!data.about.information.website) {
-      data.about.information.website = window.location.href;
+    if (!information.about.information.website) {
+      // Modify specific properties
+      setData((prevState) => ({
+        ...prevState,
+        about: {
+          ...prevState.about,
+          information: {
+            ...prevState.about.information,
+            website: window.location.href,
+            age: age,
+          },
+        },
+      }));
     }
-    data.about.information.age = age;
-  }, []);
+  }, [information]);
 
   return (
     <React.Fragment>
