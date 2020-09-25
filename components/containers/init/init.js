@@ -20,22 +20,22 @@ function InitPage() {
   return (
     <>
       <motion.div className={pageStyles.initPage} initial={{ opacity: 1 }} style={{ opacity: opacity }}>
-        <motion.div initial={{ x: -500 }} animate={{ x: 0 }} transition={{ ease: "easeOut", duration: 1 }}>
+        <motion.div initial={{ x: -2000 }} animate={{ x: 0 }} transition={{ ease: "easeOut", duration: 1 }}>
           <Typography variant="h1" component="h1" gutterBottom>
             {data.init_screen && data.init_screen.header}
           </Typography>
         </motion.div>
-        <motion.div initial={{ x: -1000 }} animate={{ x: 0 }} transition={{ ease: "easeOut", duration: 1.5 }}>
+        <motion.div initial={{ x: -2000 }} animate={{ x: 0 }} transition={{ ease: "easeOut", duration: 1.5 }}>
           <Typography variant="h2" gutterBottom>
             {data.init_screen && data.init_screen.position}
           </Typography>
         </motion.div>
-        <motion.div initial={{ x: -1000 }} animate={{ x: 0 }} transition={{ ease: "easeOut", duration: 2 }}>
+        <motion.div initial={{ x: -2000 }} animate={{ x: 0 }} transition={{ ease: "easeOut", duration: 2 }}>
           <Typography variant="h3" gutterBottom>
             Know me a little bit more.
           </Typography>
         </motion.div>
-        <motion.div className={styles.technologies} initial={{ y: -1000 }} animate={{ y: 0 }} transition={{ type: "spring", stiffness: 100, duration: 1 }}>
+        <motion.div className={styles.technologies} initial={{ y: -2000 }} animate={{ y: 0 }} transition={{ type: "spring", stiffness: 100, duration: 1 }}>
           <div>
             <Icon src="react" color="#53C1DE" rotation={-5} size="big" width={24} />
             <Icon src="JS" color="#F7DF1E" rotation={5} size="big" width={24} />
