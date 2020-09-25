@@ -4,7 +4,7 @@
 [![License: ISC](https://img.shields.io/badge/License-ISC-yellow.svg)](#)
 
 > Resume adaptable
- <br /> > <br />
+> <br /> <br />
 > Feel free to adapt it to your career
 
 ---
