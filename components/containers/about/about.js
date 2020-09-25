@@ -7,9 +7,9 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 // Styles
-import styles from "../../assets/styles/about_me.css";
+import styles from "../../../assets/styles/about_me.css";
 // Context
-import { dataContext } from "../../store/context/dataContext";
+import { dataContext } from "../../../store/context/dataContext";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function about() {
+function About() {
   const { data, isMobile } = useContext(dataContext);
   const classes = useStyles();
   const { scrollYProgress } = useViewportScroll();
@@ -78,10 +78,10 @@ function about() {
   );
 }
 
-about.propTypes = {
+About.propTypes = {
   data: PropTypes.shape({
     about: PropTypes.object.isRequired,
   }),
 };
 
-export default about;
+export default About;

@@ -1,6 +1,6 @@
 import React from "react";
 import Carousel from "react-material-ui-carousel";
-import classes from "../../assets/styles/carousel.css";
+import classes from "../../../../assets/styles/carousel.css";
 
 function CarouselComponent({ images }) {
   return (
@@ -13,10 +13,6 @@ function CarouselComponent({ images }) {
 }
 
 function Item({ url }) {
-  return (
-    <div>
-      <img className={classes.dialogCarousel} src={url} />
-    </div>
-  );
+  return <img className={classes.dialogCarousel} src={url} />;
 }
 export default CarouselComponent;

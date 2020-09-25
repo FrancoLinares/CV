@@ -1,7 +1,7 @@
 import React from "react";
-import styles from "../../assets/styles/page.css";
+import styles from "../../../assets/styles/page.css";
 
-function page({ children, height = "none" }) {
+function Page({ children, height = "none" }) {
   return (
     <div className={styles.root} style={{ height: height }}>
       {children}
@@ -9,4 +9,4 @@ function page({ children, height = "none" }) {
   );
 }
 
-export default page;
+export default Page;

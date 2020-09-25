@@ -13,7 +13,7 @@ import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import Tooltip from "@material-ui/core/Tooltip";
 // Components
-import Dialog from "../containers/dialog";
+import Dialog from "./dialog";
 
 const useStyles = makeStyles((theme) => ({
   paper: {

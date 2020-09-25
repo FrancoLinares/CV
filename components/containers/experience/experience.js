@@ -2,16 +2,16 @@ import React, { useContext } from "react";
 import PropTypes from "prop-types";
 // Material-UI
 import { makeStyles } from "@material-ui/core/styles";
-import Timeline from "../UI/timeline";
+import Timeline from "./timeline/timeline";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import WorkIcon from "@material-ui/icons/Work";
 // Styles
-import commonStyles from "../../assets/styles/common.css";
+import commonStyles from "../../../assets/styles/common.css";
 // Framer-motion
 import { motion, useViewportScroll, useTransform } from "framer-motion";
 // Context
-import { dataContext } from "../../store/context/dataContext";
+import { dataContext } from "../../../store/context/dataContext";
 
 const useStyles = makeStyles({
   box: {
@@ -21,7 +21,7 @@ const useStyles = makeStyles({
   },
 });
 
-function experience() {
+function Experience() {
   const { data, isMobile } = useContext(dataContext);
   const classes = useStyles();
   const { scrollYProgress } = useViewportScroll();
@@ -66,10 +66,10 @@ function experience() {
   );
 }
 
-experience.propTypes = {
+Experience.propTypes = {
   data: PropTypes.shape({
     experience: PropTypes.object.isRequired,
   }),
 };
 
-export default experience;
+export default Experience;

@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 // Store
-import data from "../store/data/pages";
+import data from "../store/data/information";
 // Components
 // -- UI
-import Page from "../components/UI/page";
-import InitPage from "../components/UI/initPage";
-import About from "../components/UI/about";
-import Skills from "../components/UI/skills";
-import Experience from "../components/UI/experience";
+import Layout from "../components/containers/layout/layout";
+import InitPage from "../components/containers/init/init";
+import About from "../components/containers/about/about";
+import Skills from "../components/containers/skills/skills";
+import Experience from "../components/containers/experience/experience";
 // Styles
 import "normalize.css";
 import animationCSS from "../assets/styles/init_screen_animation.css";
@@ -16,7 +16,7 @@ import { createMuiTheme, responsiveFontSizes, ThemeProvider } from "@material-ui
 // Context
 import { dataContext } from "../store/context/dataContext";
 // isMobile Hook
-import useDeviceDetect from "../utils/useDeviceDetect";
+import useDeviceDetect from "../hooks/useDeviceDetect";
 
 const Index = () => {
   const { isMobile } = useDeviceDetect();
@@ -46,18 +46,18 @@ const Index = () => {
         <div className={[animationCSS.bg, animationCSS.bg2].join(" ")}></div>
         <div className={[animationCSS.bg, animationCSS.bg3].join(" ")}></div>
         <dataContext.Provider value={{ data, isMobile }}>
-          <Page height={"100vh"}>
+          <Layout height={"100vh"}>
             <InitPage />
-          </Page>
-          <Page>
+          </Layout>
+          <Layout>
             <About />
-          </Page>
-          <Page>
+          </Layout>
+          <Layout>
             <Skills />
-          </Page>
-          <Page>
+          </Layout>
+          <Layout>
             <Experience />
-          </Page>
+          </Layout>
         </dataContext.Provider>
       </ThemeProvider>
     </React.Fragment>

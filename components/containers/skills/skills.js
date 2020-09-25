@@ -7,12 +7,12 @@ import Grid from "@material-ui/core/Grid";
 import LinearProgress from "@material-ui/core/LinearProgress";
 import Box from "@material-ui/core/Box";
 // Styles
-import styles from "../../assets/styles/about_me.css";
-import commonStyles from "../../assets/styles/common.css";
+import styles from "../../../assets/styles/about_me.css";
+import commonStyles from "../../../assets/styles/common.css";
 // Framer-motion
 import { motion, useViewportScroll, useTransform } from "framer-motion";
 // Context
-import { dataContext } from "../../store/context/dataContext";
+import { dataContext } from "../../../store/context/dataContext";
 
 const BorderLinearProgress = withStyles((theme) => ({
   root: {
@@ -28,7 +28,7 @@ const BorderLinearProgress = withStyles((theme) => ({
   },
 }))(LinearProgress);
 
-function skills() {
+function Skills() {
   const { data, isMobile } = useContext(dataContext);
   const { scrollYProgress } = useViewportScroll();
   let opacity = 0;
@@ -68,10 +68,10 @@ function skills() {
   );
 }
 
-skills.propTypes = {
+Skills.propTypes = {
   data: PropTypes.shape({
     skills: PropTypes.object.isRequired,
   }),
 };
 
-export default skills;
+export default Skills;

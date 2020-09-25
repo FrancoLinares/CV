@@ -33,39 +33,35 @@ export default function ScrollDialog({ open, setOpen, data }) {
   useEffect(() => {
     if (open) {
       const { current: descriptionElement } = descriptionElementRef;
-      if (descriptionElement !== null) {
-        descriptionElement.focus();
-      }
+      if (descriptionElement !== null) descriptionElement.focus();
     }
   }, [open]);
 
   return (
-    <div>
-      <Dialog open={open} onClose={handleClose} scroll={"body"} aria-labelledby="scroll-dialog-title" aria-describedby="scroll-dialog-description">
-        <DialogTitle id="scroll-dialog-title">{data && data.title}</DialogTitle>
-        <DialogContent dividers={true}>
+    <Dialog open={open} onClose={handleClose} scroll="body" aria-labelledby="scroll-dialog-title" aria-describedby="scroll-dialog-description">
+      {data && <DialogTitle id="scroll-dialog-title">{data.title}</DialogTitle>}
+      <DialogContent divider="true">
+        {data.dialog && (
           <DialogContentText id="scroll-dialog-description" ref={descriptionElementRef} tabIndex={-1}>
-            {data.dialog.text && data.dialog.text}
+            {data.dialog.text}
           </DialogContentText>
-          {data && data.dialog && data.dialog.tech.length > 0 && (
-            <>
-              <p>Technology involved:</p>
-              {data.dialog.tech.map((tech, i) => (
-                <Chip key={i} label={tech} color="primary" variant="outlined" />
-              ))}
-            </>
-          )}
-          {data.urlImages && <Carousel images={data.urlImages} />}
-          {data.website && (
-            <Typography variant="subtitle2" gutterBottom className={classes.website}>
-              <Link href={data.website} onClick={(e) => e.preventDefault()}>
-                {data.website}
-              </Link>
-            </Typography>
-          )}
-        </DialogContent>
-      </Dialog>
-    </div>
+        )}
+        {data && data.dialog && data.dialog.tech.length > 0 && (
+          <>
+            <p>Technology involved:</p>
+            {data.dialog.tech.map((tech, i) => (
+              <Chip key={i} label={tech} color="primary" variant="outlined" />
+            ))}
+          </>
+        )}
+        {data.urlImages && <Carousel images={data.urlImages} />}
+        {data.website && (
+          <Typography variant="subtitle2" gutterBottom className={classes.website}>
+            <Link href={data.website}>{data.website}</Link>
+          </Typography>
+        )}
+      </DialogContent>
+    </Dialog>
   );
 }
 
