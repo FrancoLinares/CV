@@ -52,25 +52,23 @@ function About() {
             <Typography variant="h2" gutterBottom>
               Basic information:
             </Typography>
-            <Typography variant="h4" gutterBottom>
-              {data.about.information &&
-                Object.entries(data.about.information).map(([key, value]) => {
-                  return (
-                    <Grid key={key} container spacing={2}>
-                      <Grid item lg={6}>
-                        <Typography variant="h4" gutterBottom>
-                          {key.toUpperCase()} :
-                        </Typography>
-                      </Grid>
-                      <Grid item lg={6} className={styles.basicInformationValue}>
-                        <Typography variant="h4" gutterBottom>
-                          {value}
-                        </Typography>
-                      </Grid>
+            {data.about.information &&
+              Object.entries(data.about.information).map(([key, value]) => {
+                return (
+                  <Grid key={key} container spacing={2}>
+                    <Grid item lg={6}>
+                      <Typography variant="h4" gutterBottom>
+                        {key.toUpperCase()} :
+                      </Typography>
                     </Grid>
-                  );
-                })}
-            </Typography>
+                    <Grid item lg={6} className={styles.basicInformationValue}>
+                      <Typography variant="h4" gutterBottom>
+                        {value}
+                      </Typography>
+                    </Grid>
+                  </Grid>
+                );
+              })}
           </div>
         </Grid>
       </Grid>

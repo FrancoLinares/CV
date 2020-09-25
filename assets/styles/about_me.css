@@ -38,6 +38,7 @@
 
 .paper > div {
   margin: 0 6vw;
+  overflow-wrap: break-word;
 }
 
 .basicInformationValue {
