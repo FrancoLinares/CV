@@ -6,7 +6,7 @@
   text-align: center;
   background: linear-gradient(to left, #4e4e5400, #4e4e5447);
   color: #2b2e3cbd;
-  @import "init_screen";
+  @import "./init_screen";
 }
 @media only screen and (max-width: 600px) {
   .root {

@@ -17,7 +17,7 @@ import { dataContext } from "../../../../store/context/dataContext";
 // Components
 import Dialog from "./dialog";
 // Styles
-import timelineStyles from "../../../../assets/styles/timeline.scss";
+import timelineStyles from "./timeline.scss";
 
 const useStyles = makeStyles((theme) => ({
   paper: {

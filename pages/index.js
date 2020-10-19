@@ -10,7 +10,6 @@ import Skills from "../components/containers/skills/skills";
 import Experience from "../components/containers/experience/experience";
 import { CircleIndicator } from "../components/UI/icon/viewportScrollSvg/viewportScrollSvg";
 // Styles
-import "normalize.css";
 import animationCSS from "../assets/styles/init_screen_animation.css";
 // Material-UI
 import { createMuiTheme, responsiveFontSizes, ThemeProvider } from "@material-ui/core/styles";
