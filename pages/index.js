@@ -8,6 +8,7 @@ import InitPage from "../components/containers/init/init";
 import About from "../components/containers/about/about";
 import Skills from "../components/containers/skills/skills";
 import Experience from "../components/containers/experience/experience";
+import { CircleIndicator } from "../components/UI/icon/viewportScrollSvg/viewportScrollSvg";
 // Styles
 import "normalize.css";
 import animationCSS from "../assets/styles/init_screen_animation.css";
@@ -69,6 +70,7 @@ const Index = () => {
           <Layout>
             <Experience />
           </Layout>
+          <CircleIndicator />
         </dataContext.Provider>
       </ThemeProvider>
     </React.Fragment>
