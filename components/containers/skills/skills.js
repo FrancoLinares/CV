@@ -7,7 +7,6 @@ import Grid from "@material-ui/core/Grid";
 import LinearProgress from "@material-ui/core/LinearProgress";
 import Box from "@material-ui/core/Box";
 // Styles
-import styles from "../../../assets/styles/about_me.scss";
 import commonStyles from "../../../assets/styles/common.scss";
 // Framer-motion
 import { motion, useViewportScroll, useTransform } from "framer-motion";
@@ -32,8 +31,10 @@ function Skills() {
   const { data, isMobile } = useContext(dataContext);
   const { scrollYProgress } = useViewportScroll();
   let opacity = 0;
+  let skillGridClassColumns = 4;
   if (isMobile) {
     opacity = useTransform(scrollYProgress, [0.2, 0.25, 0.28, 0.3], [0, 0.2, 0.79, 1]);
+    skillGridClassColumns = 6;
   } else {
     opacity = useTransform(scrollYProgress, [0.28, 0.3, 0.34, 0.38], [0, 0.1, 0.8, 1]);
   }
@@ -48,7 +49,7 @@ function Skills() {
         {data.skills.tech &&
           Object.entries(data.skills.tech).map(([key, value]) => {
             return (
-              <Grid key={key} item lg={4} className={styles.paper}>
+              <Grid key={key} item xs={skillGridClassColumns} className={commonStyles.skillGrid}>
                 <Typography variant="h5" gutterBottom>
                   {key}
                 </Typography>

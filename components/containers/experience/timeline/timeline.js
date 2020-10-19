@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 // Material-UI
 import { makeStyles } from "@material-ui/core/styles";
 import Timeline from "@material-ui/lab/Timeline";
@@ -12,8 +12,12 @@ import LaptopMacIcon from "@material-ui/icons/LaptopMac";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import Tooltip from "@material-ui/core/Tooltip";
+// Context
+import { dataContext } from "../../../../store/context/dataContext";
 // Components
 import Dialog from "./dialog";
+// Styles
+import timelineStyles from "../../../../assets/styles/timeline.scss";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -31,6 +35,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function CustomizedTimeline({ data }) {
   const classes = useStyles();
+  // Context
+  const { isMobile } = useContext(dataContext);
   // Dialog
   const emptyDialog = {
     title: "",
@@ -53,13 +59,13 @@ export default function CustomizedTimeline({ data }) {
 
   return (
     <>
-      <Timeline align="alternate">
+      <Timeline align={isMobile ? "left" : "alternate"}>
         {data &&
           data.map((m, i) => {
             return (
               <React.Fragment key={i}>
                 <TimelineItem>
-                  <TimelineOppositeContent>
+                  <TimelineOppositeContent className={timelineStyles.oppositeContextTimeline}>
                     <Typography variant="body1" color="textSecondary">
                       {m.time}
                     </Typography>

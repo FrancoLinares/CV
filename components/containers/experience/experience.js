@@ -15,7 +15,7 @@ import { dataContext } from "../../../store/context/dataContext";
 
 const useStyles = makeStyles({
   box: {
-    width: "80%",
+    width: "90%",
     margin: "auto",
     padding: "18vh 0 5vh 0",
   },
