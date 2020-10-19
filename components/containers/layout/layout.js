@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../../assets/styles/page.css";
+import styles from "../../../assets/styles/page.scss";
 
 function Page({ children, height = "none" }) {
   return (

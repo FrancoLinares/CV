@@ -7,7 +7,7 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 // Styles
-import styles from "../../../assets/styles/about_me.css";
+import styles from "../../../assets/styles/about_me.scss";
 // Context
 import { dataContext } from "../../../store/context/dataContext";
 

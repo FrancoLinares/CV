@@ -7,8 +7,8 @@ import Grid from "@material-ui/core/Grid";
 import LinearProgress from "@material-ui/core/LinearProgress";
 import Box from "@material-ui/core/Box";
 // Styles
-import styles from "../../../assets/styles/about_me.css";
-import commonStyles from "../../../assets/styles/common.css";
+import styles from "../../../assets/styles/about_me.scss";
+import commonStyles from "../../../assets/styles/common.scss";
 // Framer-motion
 import { motion, useViewportScroll, useTransform } from "framer-motion";
 // Context
@@ -48,7 +48,7 @@ function Skills() {
         {data.skills.tech &&
           Object.entries(data.skills.tech).map(([key, value]) => {
             return (
-              <Grid key={key} item xs={4} className={styles.paper}>
+              <Grid key={key} item lg={4} className={styles.paper}>
                 <Typography variant="h5" gutterBottom>
                   {key}
                 </Typography>

@@ -5,8 +5,8 @@ import { motion, useViewportScroll, useTransform } from "framer-motion";
 // Material UI
 import Typography from "@material-ui/core/Typography";
 // Styles
-import styles from "../../../assets/styles/common.css";
-import pageStyles from "../../../assets/styles/page.css";
+import styles from "../../../assets/styles/common.scss";
+import pageStyles from "../../../assets/styles/page.scss";
 // Context
 import { dataContext } from "../../../store/context/dataContext";
 // Components

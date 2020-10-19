@@ -7,7 +7,7 @@ import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import WorkIcon from "@material-ui/icons/Work";
 // Styles
-import commonStyles from "../../../assets/styles/common.css";
+import commonStyles from "../../../assets/styles/common.scss";
 // Framer-motion
 import { motion, useViewportScroll, useTransform } from "framer-motion";
 // Context
