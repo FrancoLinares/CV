@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef, useEffect } from "react";
 import PropTypes from "prop-types";
 // Framer-motion
 import { motion, useViewportScroll, useTransform } from "framer-motion";
@@ -47,6 +47,22 @@ function InitPage() {
             <Icon src="apollo" color="#000" rotation={-5} size="big" width={24} />
             <Icon src="python" color="#000" rotation={-10} size="big" width={24} />
           </div>
+        </motion.div>
+        <motion.div
+          animate={{ scale: [1, 1.5, 1] }}
+          transition={{
+            duration: 2,
+            ease: "easeInOut",
+            times: [0, 0.5, 1],
+            loop: Infinity,
+            repeatDelay: 1,
+          }}
+          className={styles.angelArrow}
+          onClick={() => {
+            window.scrollTo(0, screen.height);
+          }}
+        >
+          <Icon src="angelArrow" color="#000" rotation={-270} size="big" width={24} />
         </motion.div>
         {data.social && (
           <motion.div className={styles.socialMedia}>

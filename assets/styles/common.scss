@@ -53,6 +53,12 @@ h3.title {
   width: 50px;
 }
 
+.angelArrow {
+  bottom: 5px;
+  position: absolute;
+  left: 50%;
+}
+
 @keyframes progress {
   0% {
     transform: translateX(0px);

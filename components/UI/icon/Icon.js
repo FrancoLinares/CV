@@ -12,6 +12,7 @@ import Apollo from "./svg/apollo";
 import Python from "./svg/python";
 import Github from "./svg/github";
 import Linkedin from "./svg/linkedin";
+import AngelArrow from "./svg/angelArrow";
 // Constant
 import { URLs } from "../../../utils/constant/constant";
 
@@ -25,6 +26,7 @@ const iconsCollection = {
   python: Python,
   github: Github,
   linkedin: Linkedin,
+  angelArrow: AngelArrow,
 };
 
 const properties = {
@@ -38,6 +40,7 @@ const properties = {
     python: "Python",
     github: "Github",
     linkedin: "Linkedin",
+    angelArrow: "Check below",
   },
   size: {
     huge: "huge",
@@ -48,12 +51,12 @@ const properties = {
   },
 };
 
-function Icon({ color, src, urlProp, rotation, size, width }) {
+function Icon({ color, src, urlProp, rotation, size, width, className }) {
   const IconSVG = iconsCollection[src];
   let iconColor = color;
   const url = urlProp ? urlProp : URLs[src];
   return (
-    <IconContainer title={properties.icons[src]} rotation={rotation} size={size} width={width}>
+    <IconContainer title={properties.icons[src]} rotation={rotation} size={size} width={width} className={className}>
       {iconsCollection[src] && (
         <a href={url} target="_blank">
           <IconSVG color={iconColor} />

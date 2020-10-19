@@ -6,7 +6,7 @@ import styles from "./viewportScrollSvg.scss";
 export const CircleIndicator = () => {
   const [isComplete, setIsComplete] = useState(false);
   const { scrollYProgress } = useViewportScroll();
-  const yRange = useTransform(scrollYProgress, [0, 0.97], [0, 1]);
+  const yRange = useTransform(scrollYProgress, [0, 0.94], [0, 1]);
   const pathLength = useSpring(yRange, { stiffness: 400, damping: 90 });
 
   useEffect(() => yRange.onChange((v) => setIsComplete(v >= 1)), [yRange]);

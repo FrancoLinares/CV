@@ -18,14 +18,14 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function IconContainer({ title, rotation, size, width, children }) {
+function IconContainer({ title, rotation, size, width, children, className }) {
   const styles = {
     transform: `rotateZ(${rotation}deg)`,
     // width: width + "px",
   };
   return (
     <Tooltip title={title}>
-      <IconButton aria-label={title} style={styles}>
+      <IconButton aria-label={title} style={styles} className={className}>
         {children}
       </IconButton>
     </Tooltip>
