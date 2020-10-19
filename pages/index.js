@@ -27,7 +27,7 @@ const Index = () => {
       // withWidth component ⚛️
       MuiWithWidth: {
         // Initial width property
-        initialWidth: "lg", // Breakpoint being globally set 🌎!
+        initialWidth: "xs", // Breakpoint being globally set 🌎!
       },
     },
   });

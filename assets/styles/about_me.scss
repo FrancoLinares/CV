@@ -18,6 +18,14 @@
   box-sizing: border-box;
   padding: 10vmin;
 }
+.aboutGrid > :nth-child(2n) {
+  margin-left: -2vw;
+}
+.aboutGrid .boxShadow {
+  background-color: rgba(255, 255, 255, 0.29);
+  border: 30px solid rgba(255, 255, 255, 0);
+  border-radius: 5px;
+}
 .paper > div {
   margin: 0 6vw;
   overflow-wrap: break-word;
