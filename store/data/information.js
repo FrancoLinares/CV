@@ -9,7 +9,7 @@ const webPageData = {
   },
   about: {
     desc:
-      "I am a full-stack web developer and a Bachelor of Organization Information Systems student at the UBA.\nI like to be updated in the new technologies that appear, and to implement a clean and reusable code applying the best practices. I am currently involved in the development of trading tools.\nI have experience in the web development sector since 2013.\nI am curious and I am always working on personal projects.",
+      "I am a full-stack web developer and a student of Bachelor of Organization Information Systems at the UBA.\nI like to be updated in the new technologies that appear, and to implement a clean and reusable code applying the best practices. I am currently involved in the development of trading tools.\nI have experience in the web development sector since 2013.\nI am curious and I am always working on personal projects.",
     information: {
       location: "Argentina, Capital Federal",
       age: "09/04/1995",
